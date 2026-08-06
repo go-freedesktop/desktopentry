@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Text Editor HI
+Exec=editor-hi %F
+Icon=editor-hi
+Categories=Utility;

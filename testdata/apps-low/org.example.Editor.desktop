@@ -1,0 +1,28 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Text Editor
+Name[fr]=Éditeur de texte
+GenericName=Editor
+GenericName[fr]=Éditeur
+Comment=Edit text files
+Comment[fr]=Éditer des fichiers texte
+Exec=editor %F
+TryExec=editor
+Icon=accessories-text-editor
+Terminal=false
+Categories=Utility;TextEditor;
+Keywords=text;editor;
+Keywords[fr]=texte;éditeur;
+MimeType=text/plain;
+StartupWMClass=Editor
+Actions=NewWindow;NewDocument;
+
+[Desktop Action NewWindow]
+Name=New Window
+Exec=editor --new-window
+Icon=window-new
+
+[Desktop Action NewDocument]
+Name=New Document
+Exec=editor --new-document %f
