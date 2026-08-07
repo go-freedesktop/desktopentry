@@ -34,6 +34,10 @@ jobs:
       - run: go build ./...
       - name: Test + 100% coverage gate
         shell: bash
+        # -race requires the cgo runtime; the library itself is CGO-free (proven
+        # by the CGO_ENABLED=0 arch matrix below). Enable cgo for this step only.
+        env:
+          CGO_ENABLED: "1"
         run: |
           COVERPKG=$(go list ./... | paste -sd, -)
           go test -race -coverpkg="$COVERPKG" -coverprofile=cover.out ./...
